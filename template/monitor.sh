@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-while inotifywait main.tex
+while true
 do
-    bash compile.sh
+    while inotifywait main.tex
+    do
+        bash compile.sh
+    done
 done
